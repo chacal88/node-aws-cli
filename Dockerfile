@@ -6,6 +6,7 @@ ENV PYTHONUNBUFFERED=1
 
 RUN echo "**** install Python ****" && \
     apk add --no-cache python3 && \
+    apk add wget && \
     if [ ! -e /usr/bin/python ]; then ln -sf python3 /usr/bin/python ; fi && \
     \
     echo "**** install pip ****" && \
