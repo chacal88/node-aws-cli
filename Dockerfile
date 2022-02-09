@@ -5,7 +5,7 @@ FROM node:12-alpine
 ENV PYTHONUNBUFFERED=1
 
 RUN echo "**** install Python ****" && \
-    apk add --no-cache python3 && \
+    apk add --no-cache python3 git && \
     apk add wget && \
     if [ ! -e /usr/bin/python ]; then ln -sf python3 /usr/bin/python ; fi && \
     \
